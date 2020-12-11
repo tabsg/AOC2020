@@ -4,13 +4,13 @@ def main():
     lines = [l.rstrip() for l in lines]
     width = len(lines[0])
     height = len(lines)
+    print("part 1: " + str(countTrees(3, 1, lines, width, height)))
     prod = 1
-    prod *= countTrees(1, 1, lines, width, height)
-    prod *= countTrees(3, 1, lines, width, height)
-    prod *= countTrees(5, 1, lines, width, height)
-    prod *= countTrees(7, 1, lines, width, height)
-    prod *= countTrees(1, 2, lines, width, height)
-    print(prod)
+    slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
+    for s in slopes:
+        dx, dy = s
+        prod *= countTrees(dx, dy, lines, width, height)
+    print("part 2: " + str(prod))
 
 def countTrees(dx, dy, lines, width, height):
     trees = 0

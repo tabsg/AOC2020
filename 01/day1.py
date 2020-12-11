@@ -5,9 +5,9 @@ def main():
     for line in lines:
         numbers.append(int(line.rstrip("\n")))
     (a, b) = getVals(numbers)
-    print (a * b)
+    print ("part 1: " + str(a * b))
     (a, b, c) = get3Vals(numbers)
-    print (a * b * c)
+    print ("part 2: " + str(a * b * c))
 
 
 def getVals(numbers):

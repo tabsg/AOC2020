@@ -2,8 +2,8 @@ def main():
     file1 = open('day9input.txt', 'r')
     lines = file1.readlines()
     lines = [int(line.rstrip()) for line in lines]
-    print(findBad(lines, 25))
-    print(sum(findRange(lines,findBad(lines, 25))))
+    print("part 1: " + str(findBad(lines, 25)))
+    print("part 2: " + str(sum(findRange(lines,findBad(lines, 25)))))
 
 def findRange(lines, goal):
     for i in range(len(lines)):

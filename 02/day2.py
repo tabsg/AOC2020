@@ -9,8 +9,8 @@ def main():
             total1 += 1
         if (checkValid2(line)):
             total2 += 1
-    print(total1)
-    print(total2)
+    print("part 1: " + str(total1))
+    print("part 2: " + str(total2))
 
 def checkValid1(line):
     toks = line.split(' ')
