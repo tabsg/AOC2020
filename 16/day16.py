@@ -1,8 +1,8 @@
 import math
 
 def main():
-    with open("day16input.txt") as f:
-        fields, mine, near = f.read().split('\n\n')
+    file1 = open('day16input.txt', 'r')
+    fields, mine, near = file1.read().split('\n\n')
     fields = {f[0]: f[1] for f in (getField(f) for f in fields.splitlines())}
     mine = getMine(mine.splitlines()[1])
     near = [getMine(t) for t in near.splitlines()[1:]]
